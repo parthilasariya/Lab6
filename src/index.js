@@ -35,7 +35,19 @@ const NewRoute = () => {
       </div>
       );
       };
-      
+
+      const Student = ({ match }) => {
+        const { studentname } = match.params;
+        return (
+        <div>
+        <p>Student</p>
+        <div>
+        <div>{`The student name is "${studentname}"!`}</div>
+        </div>
+        </div>
+        );
+        };
+        
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

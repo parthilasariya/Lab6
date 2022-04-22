@@ -1,13 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+
 import {BrowserRouter, Switch, Route, Link, Routes}  from "react-router-dom";
-import React, {Component, Home, NewRoute} from "react";
-
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Error from "./components/Error";
-
+import React, {Component, Home, NewRoute, Student, About, Contact} from "react";
 
 class App extends Component {
   render() {
@@ -24,7 +19,6 @@ class App extends Component {
       <li>
       <Link to="/about">About</Link>
       </li>
-
       <li>
       <Link to="/newroute">New Route</Link>
       </li>
@@ -35,11 +29,8 @@ class App extends Component {
         <Route path="/contact" component={Contact} />
         <Route component={Error} />
         <Route path="/student/:studentname/:studentno?"
-      component={Student} />
-
+        component={Student} />
       </Routes>
-      
-
       </div>
       </BrowserRouter>      
   );
